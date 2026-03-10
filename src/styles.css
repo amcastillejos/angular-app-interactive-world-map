@@ -1,0 +1,38 @@
+
+.country {
+  cursor: pointer;
+  transition: opacity 120ms ease-in-out;
+}
+
+.country.hover {
+  opacity: 0.7;
+}
+
+.country.selected {
+  opacity: 0.5;
+  outline: none;
+}
+
+
+.country {
+  fill: #2f855a;           
+  stroke: rgba(0, 0, 0, 0.35);
+  stroke-width: 0.6;
+  cursor: pointer;
+  transition: fill 120ms ease-in-out, opacity 120ms ease-in-out;
+}
+
+
+.country.hover {
+  opacity: 0.95;
+}
+
+
+.country.selected {
+  fill: #f6ad55 !important; 
+  opacity: 1;
+}
+
+svg {
+  background-color: transparent;
+}

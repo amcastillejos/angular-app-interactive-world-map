@@ -1,0 +1,23 @@
+<div class="layout">
+  <div class="map" [innerHTML]="svgContent"></div>
+
+  <div class="info">
+    <h2>Country Information</h2>
+
+    <p *ngIf="!selectedCountry && !errorMsg">
+      Click a country on the map to view details.
+    </p>
+
+    <p *ngIf="errorMsg" class="error">{{ errorMsg }}</p>
+
+    <div *ngIf="selectedCountry">
+      <p><strong>Country name:</strong> {{ selectedCountry.name }}</p>
+      <p><strong>Capital:</strong> {{ selectedCountry.capital }}</p>
+      <p><strong>Region:</strong> {{ selectedCountry.region }}</p>
+      <p><strong>Income level:</strong> {{ selectedCountry.incomeLevel }}</p>
+      <p><strong>Latitude:</strong> {{ selectedCountry.latitude }}</p>
+      <p><strong>Longitude:</strong> {{ selectedCountry.longitude }}</p>
+    </div>
+  </div>
+</div>
+
